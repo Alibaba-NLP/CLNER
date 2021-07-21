@@ -1,5 +1,5 @@
 
-# ACE
+# CLNER
 
 The code is for our ACL-IJCNLP 2021 paper: [Improving Named Entity Recognition by External Context Retrieving and Cooperative Learning](https://arxiv.org/abs/2105.03654)
 
