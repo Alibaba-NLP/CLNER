@@ -5,53 +5,13 @@ The code is for our ACL-IJCNLP 2021 paper: [Improving Named Entity Recognition b
 
 CLNER is a framework for improving the accuracy of NER models through retrieving external contexts, then use the cooperative learning approach to improve the both input views. The code is initially based on [flair version 0.4.3](https://github.com/flairNLP/flair). Then the code is extended with [knwoledge](https://github.com/Alibaba-NLP/MultilangStructureKD) [distillation](https://github.com/Alibaba-NLP/StructuralKD) and [ACE](https://github.com/Alibaba-NLP/ACE) approaches to distill smaller models or achieve SOTA results. The config files in these repos are also applicable to this code.
 
-<!-- 
-## Comparison with State-of-the-Art
-
-| Task | Language | Dataset | ACE | Previous best |
-| -------------------------------  | ---  | ----------- | ---------------- | ------------- |
-| Named Entity Recognition |English | CoNLL 03 (document-level)   |  **94.6** (F1)  | *94.3 [(Yamada et al., 2020)](https://arxiv.org/pdf/2010.01057.pdf)* |
-| Named Entity Recognition |German | CoNLL 03 (document-level)   |  **88.3** (F1) | *86.4 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |German | CoNLL 03 (06 Revision) (document-level)   |  **91.7** (F1)   | *90.3 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |Dutch | CoNLL 02 (document-level)   |  **95.7** (F1) | *93.7 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |Spanish | CoNLL 02 (document-level)   |  **95.9** (F1)  | *90.3 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |English | CoNLL 03 (sentence-level)   |  **93.6** (F1)  | *93.5 [(Baevski et al., 2019)](https://arxiv.org/pdf/1903.07785v1.pdf)* |
-| Named Entity Recognition |German | CoNLL 03 (sentence-level)   |  **87.0** (F1) | *86.4 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |German | CoNLL 03 (06 Revision) (sentence-level)   |  **90.5** (F1)   | *90.3 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |Dutch | CoNLL 02 (sentence-level)   |  **94.6** (F1) | *93.7 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| Named Entity Recognition |Spanish | CoNLL 02 (sentence-level)   |  **91.7** (F1)  | *90.3 [(Yu et al., 2020)](https://arxiv.org/pdf/2005.07150.pdf)* |
-| POS Tagging |English | Ritter's |  **93.4** (Acc)  | *90.1 [(Nguyen et al., 2020)](https://arxiv.org/pdf/2005.10200.pdf)* |
-| POS Tagging |English | Ark |  **94.4** (Acc)  | *94.1 [(Nguyen et al., 2020)](https://arxiv.org/pdf/2005.10200.pdf)* |
-| POS Tagging |English | TweeBank v2 |  **95.8** (Acc)  | *95.2 [(Nguyen et al., 2020)](https://arxiv.org/pdf/2005.10200.pdf)* |
-| Aspect Extraction |English | SemEval 2014 Laptop |  **87.4** (F1)  | *84.3 [(Xu et al., 2019)](https://arxiv.org/pdf/1904.02232.pdf)* |
-| Aspect Extraction |English | SemEval 2014 Restaurant |  **92.0** (F1)  | *87.1 [(Wei et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.339/)* |
-| Aspect Extraction |English | SemEval 2015 Restaurant |  **80.3** (F1)  | *72.7 [(Wei et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.339/)* |
-| Aspect Extraction |English | SemEval 2016 Restaurant |  **81.3** (F1)  | *78.0 [(Xu et al., 2019)](https://arxiv.org/pdf/1904.02232.pdf)* |
-| Dependency Parsing | English | PTB    |  **95.7** (LAS)  | *95.3 [(Wang et al., 2020)](https://arxiv.org/pdf/2010.05003.pdf)* |
-| Semantic Dependency Parsing | English | DM ID   |  **95.6** (LF1)  | *94.4 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
-| Semantic Dependency Parsing | English | DM OOD   |  **92.6** (LF1)  | *91.0 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
-| Semantic Dependency Parsing | English | PAS ID   |  **95.8** (LF1)  | *95.1 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
-| Semantic Dependency Parsing | English | PAS OOD   |  **94.6** (LF1)  | *93.4 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
-| Semantic Dependency Parsing | English | PSD ID   |  **83.8** (LF1)  | *82.6 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
-| Semantic Dependency Parsing | English | PSD OOD   |  **83.4** (LF1)  | *82.0 [(Fernández-González and Gómez-Rodríguez, 2020)](https://www.aclweb.org/anthology/2020.acl-main.629/)* |
- -->
 ## Guide
 
 - [Requirements](#requirements)
 - [Datasets](#datasets)
-<!-- - [Pretrained Models](#Pretrained-Models)
-  - [Instructions for Reproducing Results](#Instructions-for-Reproducing-Results) -->
-<!-- - [Download Embeddings](#Download-Embeddings) -->
-  <!-- - [Dump Fine-tuned Embeddings in the Pretrained Models ](#Dump-Fine-tuned-Embeddings-in-the-Pretrained-Models) -->
 - [Training](#training)
-<!--   - [Training ACE Models](#training-ace-models)
-  - [Train on Your Own Dataset](#Train-on-Your-Own-Dataset)
-  - [Set the Embeddings](#Set-the-Embeddings)
-  - [(Optional) Fine-tune Transformer-based Embeddings](#Optional-Fine-tune-Transformer-based-Embeddings)
-  - [(Optional) Extract Document Features for BERT Embeddings](#Optional-Extract-Document-Features-for-BERT-Embeddings) -->
 - [Parse files](#parse-files)
 - [Config File](#Config-File)
-<!-- - [TODO](#todo) -->
 - [Citing Us](#Citing-Us)
 - [Contact](#contact)
 
