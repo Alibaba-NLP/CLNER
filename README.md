@@ -26,7 +26,7 @@ The following requirements should be satisfied:
 * [transformers](https://github.com/huggingface/transformers): **3.0.0** 
 
 ## Datasets
-The datasets used in our paper is available [here](https://1drv.ms/u/s!Am53YNAPSsodg9ce3ovPukuFtSj6NQ?e=tpCvf8).
+The datasets used in our paper are available [here](https://1drv.ms/u/s!Am53YNAPSsodg9ce3ovPukuFtSj6NQ?e=tpCvf8).
 
 ## Training
 
@@ -49,7 +49,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --config config/wnut17_doc_cl_l2.yaml
 
 ### Train on Your Own Dataset
 
-To set the dataset manully, you can set the dataset in the `$confile_file` by:
+To set the dataset manully, you can set the dataset in the `$config_file` by:
 
 ```yaml
 targets: ner
