@@ -5,6 +5,15 @@ The code is for our ACL-IJCNLP 2021 paper: [Improving Named Entity Recognition b
 
 CLNER is a framework for improving the accuracy of NER models through retrieving external contexts, then use the cooperative learning approach to improve the both input views. The code is initially based on [flair version 0.4.3](https://github.com/flairNLP/flair). Then the code is extended with [knwoledge](https://github.com/Alibaba-NLP/MultilangStructureKD) [distillation](https://github.com/Alibaba-NLP/StructuralKD) and [ACE](https://github.com/Alibaba-NLP/ACE) approaches to distill smaller models or achieve SOTA results. The config files in these repos are also applicable to this code.
 
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-on-wnut-2016)](https://paperswithcode.com/sota/named-entity-recognition-on-wnut-2016?p=improving-named-entity-recognition-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-on-wnut-2017)](https://paperswithcode.com/sota/named-entity-recognition-on-wnut-2017?p=improving-named-entity-recognition-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-ner-on-bc5cdr)](https://paperswithcode.com/sota/named-entity-recognition-ner-on-bc5cdr?p=improving-named-entity-recognition-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-ner-on-ncbi-disease)](https://paperswithcode.com/sota/named-entity-recognition-ner-on-ncbi-disease?p=improving-named-entity-recognition-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-on-conll)](https://paperswithcode.com/sota/named-entity-recognition-on-conll?p=improving-named-entity-recognition-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improving-named-entity-recognition-by/named-entity-recognition-ner-on-conll-2003)](https://paperswithcode.com/sota/named-entity-recognition-ner-on-conll-2003?p=improving-named-entity-recognition-by)  
+
+
 ## Guide
 
 - [Requirements](#requirements)
