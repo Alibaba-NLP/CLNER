@@ -51,13 +51,13 @@ ner:
     column_format:
       0: text
       1: ner
-    data_folder: /home/yongjiang.jy/.flair/datasets/wnut17
+    data_folder: /home/wangxy/.flair/datasets/wnut17
     tag_to_bioes: ner
   ColumnCorpus-WNUTDOCFULL:
     column_format:
       0: text
       1: ner
-    data_folder: /home/yongjiang.jy/.flair/datasets/wnut17_bertscore_eos_doc_full
+    data_folder: /home/wangxy/.flair/datasets/wnut17_bertscore_eos_doc_full
     tag_to_bioes: ner
   Corpus: ColumnCorpus-WNUT:ColumnCorpus-WNUTDOCFULL
   professors:

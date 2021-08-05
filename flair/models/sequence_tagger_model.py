@@ -1906,20 +1906,6 @@ class FastSequenceTagger(SequenceTagger):
 		# mask=self.sequence_mask(torch.tensor(lengths), max_len).cuda().type_as(features)
 		loss = self._calculate_loss(features, data_points, self.mask)
 
-		if self.ext_loss is not None and self.ner_ext_loss:
-			inbatch_loss, self.correct = self._calculate_triplet_loss(data_points, self.mask)
-			loss += inbatch_loss
-			
-			true_positives = len(data_points)
-			n_predictions = len(data_points)
-			n_targets = len(data_points)
-			n_true_positives = self.correct
-			n_false_positives = n_predictions - n_true_positives
-			n_false_negatives = n_targets - n_true_positives
-			self.tp = n_true_positives
-			self.fp = n_false_positives
-			self.fn = n_false_negatives
-		
 		# if temp:
 		#   print(features.sum())
 		#   tag_list = self.check_multi_view(data_points)

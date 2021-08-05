@@ -41,7 +41,6 @@ import torch.nn as nn
 from torch.nn.utils.rnn import (pack_padded_sequence, pad_packed_sequence,
 								pad_sequence)
 
-from torch_struct import DependencyCRF, NonProjectiveDependencyCRF
 from .mst_decoder import MST_inference
 def process_potential(log_potential):
 	# (batch, sent_len+1, sent_len+1) or (batch, sent_len+1, sent_len+1, labels)

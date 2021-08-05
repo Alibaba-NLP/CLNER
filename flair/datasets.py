@@ -15,8 +15,6 @@ from flair.data import Sentence, Corpus, Token, FlairDataset
 from flair.file_utils import cached_path
 import pdb
 
-from flair.image_encoder import *
-
 log = logging.getLogger("flair")
 
 
